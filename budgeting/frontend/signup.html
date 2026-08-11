@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>NottsBank — Sign Up</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>NottsBank — Sign Up</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body class="login-page">
-  <nav><h1>NottsBank Budgeting Tracker</h1></nav>
-  <div class="login-wrap">
-    <div class="login-card">
-      <h2>Create your account</h2>
-      <!-- TODO: Add inputs for name, email, username and password.
-           Hint: use login.html as a reference for the markup/classes to reuse. -->
-      <!-- TODO: Add a "Sign Up" button that calls doSignup() -->
-      <!-- TODO: Add a link back to login.html for existing users -->
-    </div>
-  </div>
-  <script src="signup.js"></script>
+<nav><h1>NottsBank Budgeting Tracker</h1></nav>
+<div class="login-wrap">
+<div class="login-card">
+<h2>Create your account</h2>
+<!-- TODO: Add inputs for name, email, username and password.
+Hint: use login.html as a reference for the markup/classes to reuse. -->
+<!-- TODO: Add a "Sign Up" button that calls doSignup() -->
+<!-- TODO: Add a link back to login.html for existing users -->
+<div class="form-group">
+<label>First Name</label>
+<input type="text" id="fname" placeholder="e.g. Alice" autocomplete="fname">
+</div>
+<div class="form-group">
+<label>Last Name</label>
+<input type="text" id="lname" placeholder="e.g. Smith" autocomplete="lname">
+</div>
+<div class="form-group">
+<label>Email</label>
+<input type="text" id="email" placeholder="e.g. alice@gmail.com" autocomplete="email">
+</div>
+<div class="form-group">
+<label>Username</label>
+<input type="text" id="username" placeholder="e.g. alice" autocomplete="username">
+</div>
+<div class="form-group">
+<label>Password</label>
+<input type="password" id="password" placeholder="Your password" autocomplete="new-password">
+</div>
+<button onclick="doSignup()">Sign Up</button>
+<p class="error-msg" id="login-error"></p>
+<div class="login-link">
+Already have an account? <a href="login.html">Log in</a>
+</div>
+</div>
+</div>
+<script src="signup.js"></script>
 </body>
 </html>

@@ -1,34 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>NottsBank — Budget</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>NottsBank — Budget</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <nav>
-    <h1>NottsBank Budgeting Tracker</h1>
-    <!-- TODO: Add a back link to index.html and a logout button -->
-  </nav>
-  <main>
+<nav>
+<h1>NottsBank Budgeting Tracker</h1>
+<nav>
+<a href="index.html">Back to Dashboard</a>
+</nav>
+<nav>
+<a href="login.html">Log out</a>
+</nav>
+</nav>
 
-    <!-- FORM SECTION — shown initially -->
-    <section id="form-section">
-      <!-- TODO: Add inputs for monthly income and carryover -->
-      <!-- TODO: Add a section for outgoing categories (category name, expected, actual) -->
-      <!-- TODO: Add a button to add more category rows -->
-      <!-- TODO: Add a Save Budget button that calls submitBudget() -->
-    </section>
+<main>
 
-    <!-- RESULTS SECTION — shown after successful submission -->
-    <section id="results-section" style="display:none;">
-      <!-- TODO: Show a summary of the budget (total expected, total actual, remaining) -->
-      <!-- TODO: Show a per-category breakdown table -->
-      <!-- TODO: Show the suggestions list -->
-      <!-- TODO: Add a Back to Dashboard button -->
-    </section>
+<section id="form-section">
+<h2>Create Budget</h2>
 
-  </main>
-  <script src="budget.js"></script>
+<label>Monthly Income:</label>
+<input id="monthly-income" type="number" step="0.01">
+
+<label>Carryover:</label>
+<input id="carryover" type="number" step="0.01">
+
+<h3>Outgoing Categories</h3>
+
+<div id="categories"></div>
+
+<button type="button" onclick="addCategoryRow()">
+Add Category
+</button>
+
+<button type="button" onclick="submitBudget()">
+Save Budget
+</button>
+</section>
+
+<section id="results-section" style="display:none;">
+<h2>Budget Results</h2>
+
+<div id="summary"></div>
+
+<h3>Category Breakdown</h3>
+<div id="breakdown"></div>
+
+<h3>Suggestions</h3>
+<ul id="suggestions"></ul>
+
+<button onclick="window.location.href='index.html'">
+Back to Dashboard
+</button>
+</section>
+
+</main>
+<script src="budget.js"></script>
 </body>
 </html>
