@@ -10,16 +10,42 @@
     <h1>NottsBank Budgeting Tracker</h1>
     <div class="nav-right">
       <!-- TODO: Show welcome message (id="welcome-msg") and a logout button -->
+       <h1>Welcome Alice</h1>
     </div>
   </nav>
   <main>
     <section>
       <!-- TODO: Add a "New Budget" button that links to budget.html -->
+       <a href="budget.html" class="button-class">New Budget</a>
 
       <!-- TODO: Display all budgets in a table with columns for:
            month/year, income, carryover, outgoings, spend percentage, date created, date edited
            Each row should have Edit and Delete buttons
            Hint: use id="budgets-tbody" for the table body so app.js can populate it -->
+           <table>
+            <thead>
+              <tr>
+                <th>Month</th>
+                <th>Income</th>
+                <th>carryover</th>
+                <th>outgoings</th>
+                <th>spend percentage</th>
+                <th>date created</th>
+                <th>date edited</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>August</td>
+                  <td>7,000</td>
+                  <td>10,000</td>
+                  <td>12,000</td>
+                  <td>27%</td>
+                  <td>11/08/2026</td>
+                  <td>11/08/2026</td>
+                </tr>
+            </tbody>
+          </thead>
+           </table>
     </section>
   </main>
   <script src="app.js"></script>
