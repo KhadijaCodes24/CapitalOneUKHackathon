@@ -34,10 +34,10 @@ Build a multi-page app with the following flow:
 
 4. **Budget entry page**
    The customer fills in their budget for a given month:
-     a) Monthly income — their total take-home pay for the month.
-     b) Outgoings — categorised spending across areas such as:
+     - Monthly income — their total take-home pay for the month.
+     - Outgoings — categorised spending across areas such as:
           rent, food, bills, hobbies, socialising, savings, etc.
-     c) Carryover — if the customer has an existing account, any
+     - Carryover — if the customer has an existing account, any
         savings or leftover balance from the previous month is
         pre-filled and can be adjusted before submission.
 
@@ -51,10 +51,10 @@ Build a multi-page app with the following flow:
 
 6. **Results page**
    After a successful submission, the frontend displays:
-     a) A summary showing total expected vs actual spending and
+     - A summary showing total expected vs actual spending and
         how much is remaining.
-     b) A per-category breakdown of expected vs actual amounts.
-     c) Suggestions on how to manage their spending better, based
+     - A per-category breakdown of expected vs actual amounts.
+     - Suggestions on how to manage their spending better, based
         on the figures they have entered.
 
 7. **Budget management**
@@ -62,6 +62,7 @@ Build a multi-page app with the following flow:
      - Create a new monthly budget
      - Edit an existing budget (figures, categories, and carryover)
      - Delete a past budget they no longer need
+   
    Every budget record stores the date it was created and the date
    it was last edited, both of which are visible on the dashboard.
 
@@ -130,8 +131,8 @@ Username: alice   Password: password123
 Username: bob     Password: password123
 ```
 
-Alice's starting monthly income: £2800   Previous month carryover: £150
-Bob's starting monthly income:   £3500   Previous month carryover: £0
+- Alice's starting monthly income: £2800, Previous month carryover: £150
+- Bob's starting monthly income:   £3500, Previous month carryover: £0
 
 You are encouraged to create additional accounts.
 
@@ -168,9 +169,10 @@ it to its original values from the demo data above.
 - `login.html` and `login.js` fully built as a reference — no changes needed
 - `app.js`, `budget.js`, and `signup.js` stubbed with TODOs
 - `calculator.py` stubbed — you implement the maths and validation logic
-- Two fully worked example test files are provided:
+- Two fully worked example test files are provided (both self-contained —
+  they define their own helper functions and don't depend on your `app.py` code):
   `test_csv_io.py` — tests for reading and writing CSV files
-  `test_data.py` — tests for the database data functions
+  `test_data.py` — tests for common SQLite query patterns (find, save, delete)
 - One stubbed test file for you to complete as a stretch goal:
   `test_calculator.py` — test method names and function calls are written,
   you write the assert statements
@@ -226,5 +228,6 @@ Open: http://localhost:8080/frontend/login.html
 
 Run tests:
 ```bash
-cd backend && pytest tests/ -v
+cd backend && python3 -m pytest
 ```
+
